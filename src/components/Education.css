@@ -1,0 +1,185 @@
+.education-section,
+.languages-section,
+.interests-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.subsection-title {
+    font-size: 1.75rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+/* Education Cards */
+.education-card {
+    display: flex;
+    gap: var(--spacing-md);
+    background: var(--color-bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-base);
+}
+
+.timeline-item.highlight .education-card {
+    border-color: var(--color-accent-primary);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+.education-card:hover {
+    border-color: var(--color-accent-primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(8px);
+}
+
+.education-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-degree {
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.education-institution {
+    font-size: 1rem;
+    color: var(--color-accent-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.education-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.education-period,
+.education-location {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}
+
+/* Languages */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.language-card {
+    background: var(--color-bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    transition: all var(--transition-base);
+}
+
+.language-card:hover {
+    border-color: var(--color-accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.language-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.language-header h4 {
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.language-level {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-accent-gradient);
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+/* Interests */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.interest-card {
+    background: var(--color-bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.interest-card:hover {
+    border-color: var(--color-accent-primary);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.interest-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.interest-name {
+    font-size: 1.0625rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.interest-description {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-meta {
+        justify-content: center;
+    }
+
+    .languages-grid,
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+}

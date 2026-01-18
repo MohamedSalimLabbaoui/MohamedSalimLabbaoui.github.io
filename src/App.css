@@ -1,0 +1,8 @@
+.App {
+  position: relative;
+}
+
+/* Active nav link */
+.nav-links a.active {
+  color: var(--color-accent-primary);
+}
